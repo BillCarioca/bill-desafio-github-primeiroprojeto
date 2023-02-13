@@ -13,11 +13,15 @@ public class Condicionais {
 		
 		System.out.print("Digite a nota do aluno: ");
 		nota = sc.nextInt();
-		
-		if (nota>=0 && nota<=10) { 
-			situacaoAluno = nota>= 6 ? "Aprovado":"Reprovado";
-			System.out.println("Aluno está com nota: " + nota + " situação: " + situacaoAluno);
-		}else System.out.println("Nota invalida");
+		do {
+			if (nota>=0 && nota<=10) { 
+				situacaoAluno = nota>= 6 ? "Aprovado":"Reprovado";
+				System.out.println("Aluno está com nota: " + nota + " situação: " + situacaoAluno);
+			}else {
+				System.out.println("Nota invalida");
+				break;
+			}
+		}while(true);
 		
 		sc.close();
 	}
